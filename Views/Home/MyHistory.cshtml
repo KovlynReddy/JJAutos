@@ -1,0 +1,10 @@
+﻿@model JJAutos.Models.MyHistoryViewModel
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "MyHistory";
+}
+
+    @foreach (var item in Model.MyQoutes)
+    {
+        Html.RenderPartial("_Qoute",item);
+    }

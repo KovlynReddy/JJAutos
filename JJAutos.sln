@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJAutos", "JJAutos.csproj", "{6EC75636-4BEC-4B41-B082-CAA19EBE66FB}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "JJAutosDB", "..\JJAutosDB\JJAutosDB.sqlproj", "{BFD348EC-92B8-4751-9DBE-6CB285873D17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EC75636-4BEC-4B41-B082-CAA19EBE66FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC75636-4BEC-4B41-B082-CAA19EBE66FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC75636-4BEC-4B41-B082-CAA19EBE66FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC75636-4BEC-4B41-B082-CAA19EBE66FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD348EC-92B8-4751-9DBE-6CB285873D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD348EC-92B8-4751-9DBE-6CB285873D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD348EC-92B8-4751-9DBE-6CB285873D17}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BFD348EC-92B8-4751-9DBE-6CB285873D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD348EC-92B8-4751-9DBE-6CB285873D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD348EC-92B8-4751-9DBE-6CB285873D17}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA642E50-076E-47ED-8CE9-5C0EFA455D84}
+	EndGlobalSection
+EndGlobal

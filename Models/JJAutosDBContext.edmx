@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JJAutosDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdminDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminId" Type="nvarchar(max)" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CarDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarId" Type="nvarchar(max)" />
+          <Property Name="UserId" Type="nvarchar(max)" />
+          <Property Name="RegNo" Type="nvarchar(max)" />
+          <Property Name="Make" Type="nvarchar(max)" />
+          <Property Name="Model" Type="nvarchar(max)" />
+          <Property Name="Colour" Type="nvarchar(max)" />
+          <Property Name="PicturePath" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="QouteDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QouteId" Type="nvarchar(max)" />
+          <Property Name="CarId" Type="nvarchar(max)" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="DateBooking" Type="date" />
+          <Property Name="IsDone" Type="int" />
+          <Property Name="TotalUpper" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TotalLower" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Maintanance" Type="int" />
+          <Property Name="RepairCheckup" Type="int" />
+          <Property Name="TyreChange" Type="int" />
+          <Property Name="ClutchCheckup" Type="int" />
+          <Property Name="EngineCheckup" Type="int" />
+          <Property Name="BreakCheckup" Type="int" />
+          <Property Name="SuspensionCheckup" Type="int" />
+          <Property Name="FullFluidChange" Type="int" />
+          <Property Name="Notes" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="UserDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="varbinary(max)" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="JJAutosDBModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AdminDB" EntityType="Self.AdminDB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarDB" EntityType="Self.CarDB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QouteDB" EntityType="Self.QouteDB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserDB" EntityType="Self.UserDB" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JJAutosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdminDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CarDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Make" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Colour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="QouteDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QouteId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CarId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DateBooking" Type="DateTime" Precision="0" />
+          <Property Name="IsDone" Type="Int32" />
+          <Property Name="TotalUpper" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TotalLower" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Maintanance" Type="Int32" />
+          <Property Name="RepairCheckup" Type="Int32" />
+          <Property Name="TyreChange" Type="Int32" />
+          <Property Name="ClutchCheckup" Type="Int32" />
+          <Property Name="EngineCheckup" Type="Int32" />
+          <Property Name="BreakCheckup" Type="Int32" />
+          <Property Name="SuspensionCheckup" Type="Int32" />
+          <Property Name="FullFluidChange" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserDB">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="JJAutosDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+          <EntitySet Name="AdminDBs" EntityType="Self.AdminDB" />
+          <EntitySet Name="CarDBs" EntityType="Self.CarDB" />
+          <EntitySet Name="QouteDBs" EntityType="Self.QouteDB" />
+          <EntitySet Name="UserDBs" EntityType="Self.UserDB" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JJAutosDBModelStoreContainer" CdmEntityContainer="JJAutosDBEntities1">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="JJAutosDBModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AdminDBs">
+            <EntityTypeMapping TypeName="JJAutosDBModel.AdminDB">
+              <MappingFragment StoreEntitySet="AdminDB">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarDBs">
+            <EntityTypeMapping TypeName="JJAutosDBModel.CarDB">
+              <MappingFragment StoreEntitySet="CarDB">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CarId" ColumnName="CarId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QouteDBs">
+            <EntityTypeMapping TypeName="JJAutosDBModel.QouteDB">
+              <MappingFragment StoreEntitySet="QouteDB">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="QouteId" ColumnName="QouteId" />
+                <ScalarProperty Name="CarId" ColumnName="CarId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="DateBooking" ColumnName="DateBooking" />
+                <ScalarProperty Name="IsDone" ColumnName="IsDone" />
+                <ScalarProperty Name="TotalUpper" ColumnName="TotalUpper" />
+                <ScalarProperty Name="TotalLower" ColumnName="TotalLower" />
+                <ScalarProperty Name="Maintanance" ColumnName="Maintanance" />
+                <ScalarProperty Name="RepairCheckup" ColumnName="RepairCheckup" />
+                <ScalarProperty Name="TyreChange" ColumnName="TyreChange" />
+                <ScalarProperty Name="ClutchCheckup" ColumnName="ClutchCheckup" />
+                <ScalarProperty Name="EngineCheckup" ColumnName="EngineCheckup" />
+                <ScalarProperty Name="BreakCheckup" ColumnName="BreakCheckup" />
+                <ScalarProperty Name="SuspensionCheckup" ColumnName="SuspensionCheckup" />
+                <ScalarProperty Name="FullFluidChange" ColumnName="FullFluidChange" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDBs">
+            <EntityTypeMapping TypeName="JJAutosDBModel.UserDB">
+              <MappingFragment StoreEntitySet="UserDB">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

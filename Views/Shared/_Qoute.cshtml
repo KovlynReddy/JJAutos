@@ -1,0 +1,128 @@
+﻿@model JJAutos.Models.QouteViewModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <h4>QouteViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CarId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QouteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QouteId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateBooking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateBooking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalUpper)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalUpper)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maintance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maintance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepairCheckUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepairCheckUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TyreChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TyreChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClutchCheckup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClutchCheckup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineCheckup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineCheckup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BreakCheckup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BreakCheckup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuspensionCheckup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuspensionCheckup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullFluidChange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullFluidChange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+
+    <p>
+        @Html.ActionLink("Delete", "Delete", new { id = Model.QouteId }) |
+        @Html.ActionLink("Approve", "Approve", new { id = Model.QouteId }) |
+    </p>
+}

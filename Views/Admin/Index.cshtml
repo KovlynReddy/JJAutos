@@ -1,0 +1,239 @@
+﻿@model JJAutos.Models.AdminMainViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+View Todays Bookings
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].QouteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].DateBooking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].IsDone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].TotalUpper)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].CarId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].Maintance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].RepairCheckUp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].TyreChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].ClutchCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].EngineCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].BreakCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].SuspensionCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].FullFluidChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TodaysBookings[0].Notes)
+        </th>
+
+
+
+
+
+
+    </tr>
+    @foreach (var item in Model.TodaysBookings)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].QouteId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].DateBooking)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].IsDone)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].TotalUpper)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].CarId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].Maintance)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].RepairCheckUp)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].TyreChange)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].ClutchCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].EngineCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].BreakCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].SuspensionCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].FullFluidChange)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.TodaysBookings[0].Notes)
+            </td>
+
+
+        </tr>
+    }
+
+</table>
+
+
+View Pending Bookings
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].CarId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].QouteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].DateBooking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].IsDone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].TotalUpper)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].TotalLower)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].Maintance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].RepairCheckUp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].TyreChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].ClutchCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].EngineCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].BreakCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].SuspensionCheckup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].FullFluidChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingBookings[0].Notes)
+        </th>
+
+
+    </tr>
+    @foreach (var item in Model.PendingBookings)
+    {
+        <tr>
+
+            <td>
+
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].CarId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].QouteId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].DateBooking)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].IsDone)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].TotalUpper)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].TotalLower)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].Maintance)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].RepairCheckUp)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].TyreChange)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].ClutchCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].EngineCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].BreakCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].SuspensionCheckup)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].FullFluidChange)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.PendingBookings[0].Notes)
+            </td>
+
+
+        </tr>
+    }
+
+</table>
+
+
+View UnApproved Bookings
+
+@foreach (var item in Model.UnapprovedBookings)
+{
+    Html.RenderPartial("_Qoute", item);
+}
+
+
+
+
+

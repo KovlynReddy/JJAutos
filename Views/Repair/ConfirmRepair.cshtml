@@ -1,0 +1,26 @@
+﻿
+Enumerable<CodeFirst.Models.FriendsInfo>
+
+    @{
+    ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("View All", "Index")
+
+        @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+    {
+
+
+        <input type="text" id="txtName" name="searchparam" placeholder="Are you sure ?" />
+
+        <input type="submit" id="btnSubmit" value="Search" />
+
+    }
+
+
+
+        <input type="submit" onclick="if (confirm('Are you sure?')) 
+               { window.location.href = '@Url.Action("Complete", "Tasks", new { TaskID = Model.TaskID })'; }" />
